@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.inputs {
+  width: 300px; /* Adjust this width as needed */
+  height: 20px;
+}
+
+.inputsDate {
+  width: 300px; /* Adjust this width as needed */
+  height: 30px;
+}
+
+.buttons {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons  :hover {
+  background-color: white;
+  color: black;
+}
