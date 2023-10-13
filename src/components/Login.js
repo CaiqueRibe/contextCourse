@@ -16,12 +16,7 @@ export default function Login() {
 
    const handleDateChange = (e) => {
       const inputDate = new Date(e.target.value)
-      // Adjust the date to account for the time zone offset
-      const adjustedDate = new Date(
-         inputDate.getUTCFullYear(),
-         inputDate.getUTCMonth(),
-         inputDate.getUTCDate()
-      )
+      const adjustedDate = new Date(inputDate.getUTCFullYear(), inputDate.getUTCMonth(), inputDate.getUTCDate())
       setSelectedDate(adjustedDate)
    }
 
@@ -30,7 +25,6 @@ export default function Login() {
          <input
             className="inputs"
             type="text"
-            // value={username}
             placeholder="Username..."
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -69,7 +63,6 @@ export default function Login() {
          <button
             className="buttons"
             onClick={() => {
-               // Check if all required fields have a value
                if (username && password && nickName && selectedDate) {
                   setShowProfile(true)
                } else {
